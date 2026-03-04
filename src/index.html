@@ -1,13 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gadgets-industries - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <h1>Quel service souhaiteé-vous réaliser aujourd'hui ? </h1>
+    <header>
+        <h1>Gadgets-industries</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="font-size: 2.5rem; color: var(--dark-color); margin-bottom: 1rem;">Quel service souhaitez-vous réaliser aujourd'hui ?</h1>
+            <p style="color: #6B7280; font-size: 1.1rem;">Expert en solutions électriques et solaires sur mesure.</p>
+        </section>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="card" onclick="window.location.href='page_electrique.html'" style="cursor: pointer;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Installation Électrique</h2>
+                <p>Solutions complètes pour vos besoins en électricité industrielle et domestique. Devis précis et produits de qualité.</p>
+                <div style="margin-top: 1.5rem; color: var(--blue-color); font-weight: 600;">Découvrir &rarr;</div>
+            </div>
+
+            <div class="card" onclick="window.location.href='page_solaire.html'" style="cursor: pointer;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Installation Solaire</h2>
+                <p>Optez pour l'énergie renouvelable. Calculs d'ampérage et produits photovoltaïques adaptés à votre consommation.</p>
+                <div style="margin-top: 1.5rem; color: var(--blue-color); font-weight: 600;">Découvrir &rarr;</div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-top: 2rem;">
+            <div class="card" onclick="window.location.href='page_solaire_et_electrique.html'" style="cursor: pointer; max-width: 600px; width: 100%;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem; text-align: center;">Installation Électrique et Solaire</h2>
+                <p style="text-align: center;">L'expertise combinée pour une autonomie énergétique totale. Notre solution la plus complète pour vos projets d'envergure.</p>
+                <div style="margin-top: 1.5rem; color: var(--blue-color); font-weight: 600; text-align: center;">Découvrir &rarr;</div>
+            </div>
+        </div>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Gadgets-industries SARL. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

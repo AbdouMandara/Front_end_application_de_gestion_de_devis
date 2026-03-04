@@ -1,11 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gadgets-industries - Section Solaire</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>Gadgets-industries</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section style="margin-bottom: 2rem;">
+            <h2>Section Solaire</h2>
+            <p>Calculez vos besoins énergétiques et obtenez votre devis solaire.</p>
+        </section>
+
+        <!-- Carousel -->
+        <div class="carousel">
+            <!-- Images will be injected by JS -->
+        </div>
+
+        <div class="card">
+            <form id="quote-form">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel">Numéro de téléphone</label>
+                        <input type="tel" id="tel" class="form-control" required>
+                    </div>
+                </div>
+
+                <h3>Équipements & Calcul d'Ampérage</h3>
+                <div id="products-container" style="margin-top: 1rem;">
+                    <!-- Rows will be injected by JS -->
+                </div>
+
+                <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                    <button type="button" id="add-product" class="btn btn-blue">Ajouter un équipement</button>
+                    <button type="submit" class="btn btn-primary">Soumettre le devis solaire</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gadgets-industries SARL. Tous droits réservés.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
