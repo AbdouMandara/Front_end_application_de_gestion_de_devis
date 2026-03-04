@@ -1,4 +1,4 @@
-export const products = [
+const products = [
     "AMPOULE A BAIONNETTE",
     "AMPOULE A VICE",
     "LAMPES A REGLETTES",
@@ -41,15 +41,22 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = 0;
         const imgElement = document.createElement('img');
         imgElement.src = carouselImages[currentIndex];
+        // Ensure initial opacity is 1 if it wasn't already
+        imgElement.style.opacity = '1';
         carousel.appendChild(imgElement);
 
         setInterval(() => {
-            currentIndex = (currentIndex + 1) % carouselImages.length;
-            imgElement.style.opacity = '0';
+            imgElement.style.opacity = '0'; // Start fade out
+            
             setTimeout(() => {
+                currentIndex = (currentIndex + 1) % carouselImages.length;
                 imgElement.src = carouselImages[currentIndex];
-                imgElement.style.opacity = '1';
-            }, 500);
+                
+                // Once image is loaded or immediately show/fade in
+                imgElement.onload = () => {
+                    imgElement.style.opacity = '1';
+                };
+            }, 500); // Wait for fade out transition (0.5s in CSS)
         }, 5000);
     }
 
@@ -59,14 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const productsContainer = document.getElementById('products-container');
     const solarContainer = document.getElementById('solar-container');
 
+    console.log('Script loaded. Buttons:', { addProductBtn, addSolarBtn });
+
     if (addProductBtn && productsContainer) {
-        addProductBtn.addEventListener('click', () => {
+        addProductBtn.addEventListener('click', (e) => {
+            console.log('Adding product row');
             productsContainer.appendChild(createProductRow(false));
         });
     }
 
     if (addSolarBtn && solarContainer) {
-        addSolarBtn.addEventListener('click', () => {
+        addSolarBtn.addEventListener('click', (e) => {
+            console.log('Adding solar row');
             solarContainer.appendChild(createProductRow(true));
         });
     }
@@ -108,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         html += `
-                <button type="button" class="btn btn-primary remove-row" style="background: #EF4444; height: fit-content;">&times;</button>
+                <button type="button" class="btn btn-primary remove-row" style="background: #EF4444; height: fit-content; font-size: 1.5rem; line-height: 1;">&times;</button>
             </div>
         `;
 
