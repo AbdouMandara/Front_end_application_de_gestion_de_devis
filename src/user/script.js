@@ -186,13 +186,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Carousel Logic
     const carouselImages = [
-        '../img/akwa.jpg',
-        '../img/asquine.jpg',
-        '../img/auto-machine.jpg',
-        '../img/auto-netoyage.jpg',
-        '../img/formation-jeunesse.jpg',
-        '../img/parleg.jpg',
-        '../img/village bassa.jpg'
+        '../../img/akwa.jpg',
+        '../../img/asquine.jpg',
+        '../../img/auto-machine.jpg',
+        '../../img/auto-netoyage.jpg',
+        '../../img/formation-jeunesse.jpg',
+        '../../img/parleg.jpg',
+        '../../img/village bassa.jpg'
     ];
 
     const carousel = document.querySelector('.carousel');

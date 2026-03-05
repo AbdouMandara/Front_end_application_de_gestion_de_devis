@@ -19,12 +19,12 @@
 
 body.dark-mode {
     --dark-color: #F8FAFC;
-    --light-bg: #0F172A;
-    --white: #1E293B;
-    --gray-text: #94A3B8;
-    --glass-bg: rgba(30, 41, 59, 0.8);
-    --border-color: #334155;
-    --input-border: #475569;
+    --light-bg: #212121;
+    --white: #2A2A2A;
+    --gray-text: #A3A3A3;
+    --glass-bg: rgba(33, 33, 33, 0.8);
+    --border-color: #404040;
+    --input-border: #404040;
     --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
 }
@@ -33,7 +33,7 @@ body.dark-mode {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
