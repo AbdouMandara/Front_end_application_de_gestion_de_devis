@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gadgets-industries - Section Mixte</title>
+    <title>Gadgets-industries - Section Électrique</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -21,8 +21,8 @@
 
     <main class="container">
         <section style="margin-bottom: 2rem;">
-            <h2>Installation Électrique et Solaire</h2>
-            <p>La solution complète pour une autonomie énergétique optimale.</p>
+            <h2>Installation Électrique</h2>
+            <p>Remplissez le formulaire pour obtenir votre devis personnalisé.</p>
         </section>
 
         <!-- Carousel -->
@@ -30,9 +30,9 @@
             <!-- Images will be injected by JS -->
         </div>
 
-        <div class="card">
+        <div class="card form-soumission">
             <form id="quote-form">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                <div class="box">
                     <div class="form-group">
                         <label for="name">Nom complet</label>
                         <input type="text" id="name" class="form-control" required>
@@ -43,30 +43,21 @@
                     </div>
                 </div>
 
-                <h3>Installation Électrique</h3>
+                <h3>Produits</h3>
                 <div id="products-container" style="margin-top: 1rem;">
-                    <!-- Electric products here -->
+                    <!-- Rows will be injected by JS -->
                 </div>
-                <button type="button" id="add-product" class="btn btn-blue" style="margin-top: 1rem; margin-bottom: 2rem;">Ajouter un produit électrique</button>
 
-                <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #E5E7EB;">
-
-                <h3>Installation Solaire (Calcul d'Ampérage)</h3>
-                <div id="solar-container" style="margin-top: 1rem;">
-                    <!-- Solar products will be tagged differently in JS or handled by a separate function -->
-                </div>
-                <!-- We'll adjust JS to handle a second container if needed, or just append with solar fields -->
-                <button type="button" id="add-solar" class="btn btn-blue" style="margin-top: 1rem;">Ajouter un équipement solaire</button>
-
-                <div style="margin-top: 3rem; text-align: center;">
-                    <button type="submit" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">Soumettre le devis complet</button>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                    <button type="button" id="add-product" class="btn btn-blue">Ajouter un produit</button>
+                    <button type="submit" class="btn btn-primary">Soumettre le devis</button>
                 </div>
             </form>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Gadgets-industries SARL. Tous droits réservés.</p>
+    <footer class="footer-bottom">
+            <p>&copy; 2026 Gadgets-industries SARL. Tous droits réservés.</p>
     </footer>
 
     <script src="script.js"></script>

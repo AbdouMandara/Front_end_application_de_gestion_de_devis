@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         html += `
-                <button type="button" class="btn btn-primary remove-row" style="background: #EF4444; height: fit-content; font-size: 1.5rem; line-height: 1;">&times;</button>
+                <button type="button" class="btn btn-primary remove-row" style="background: #EF4444; height: fit-content; line-height: 1;">Retirer ce produit</button>
             </div>
         `;
 

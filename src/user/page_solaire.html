@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gadgets-industries - Section Électrique</title>
+    <title>Gadgets-industries - Section Solaire</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -21,18 +21,18 @@
 
     <main class="container">
         <section style="margin-bottom: 2rem;">
-            <h2>Section Électrique</h2>
-            <p>Remplissez le formulaire pour obtenir votre devis personnalisé.</p>
+            <h2>Installation Solaire</h2>
+            <p>Calculez vos besoins énergétiques et obtenez votre devis solaire.</p>
         </section>
 
         <!-- Carousel -->
         <div class="carousel">
-            <!-- Images will be injected by JS -->
+            <!-- Ici on insèrera les images depuis le JS -->
         </div>
 
-        <div class="card">
+        <div class="card form-soumission">
             <form id="quote-form">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                <div class="box">
                     <div class="form-group">
                         <label for="name">Nom complet</label>
                         <input type="text" id="name" class="form-control" required>
@@ -43,21 +43,21 @@
                     </div>
                 </div>
 
-                <h3>Produits</h3>
+                <h3>Équipements & Calcul d'Ampérage</h3>
                 <div id="products-container" style="margin-top: 1rem;">
-                    <!-- Rows will be injected by JS -->
+                    <!-- ici on mettra les produits depuis le JS -->
                 </div>
 
                 <div style="margin-top: 2rem; display: flex; gap: 1rem;">
-                    <button type="button" id="add-product" class="btn btn-blue">Ajouter un produit</button>
-                    <button type="submit" class="btn btn-primary">Soumettre le devis</button>
+                    <button type="button" id="add-product" class="btn btn-blue">Ajouter un équipement</button>
+                    <button type="submit" class="btn btn-primary">Soumettre le devis solaire</button>
                 </div>
             </form>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Gadgets-industries SARL. Tous droits réservés.</p>
+    <footer class="footer-bottom">
+            <p>&copy; 2026 Gadgets-industries SARL. Tous droits réservés.</p>
     </footer>
 
     <script src="script.js"></script>
