@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadgets-industries - Admin Dashboard</title>
+    <!-- Use standard user CSS for base styles -->
+    <link rel="stylesheet" href="../user/style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active" data-target="dashboard">Dashboard</a></li>
+                    <li><a href="#" data-target="devis">Devis</a></li>
+                    <li><a href="#" data-target="stock">Stock</a></li>
+                    <li><a href="#" data-target="vendeurs">Gestion Vendeurs</a></li>
+                    <li><a href="#" data-target="rapports">Rapports</a></li>
+                    <li><a href="#" data-target="validation">Validation Devis</a></li>
+                    <li><a href="#" data-target="clients">Gestion Clients</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="theme-toggle" class="btn" style="width: 100%; border: 1px solid var(--border-color); background: transparent; color: var(--dark-color);">
+                    Changer de thème
+                </button>
+                <a href="../user/index.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Retour au site</a>
+            </div>
+        </aside>
+
+        <main class="admin-content">
+            <!-- Dashboard View -->
+            <section id="dashboard" class="view-section active">
+                <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                    <h2>Dashboard</h2>
+                    <p>Aperçu général de l'activité</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card card">
+                        <h3>Devis Réalisés</h3>
+                        <p class="stat-number">1,245</p>
+                    </div>
+                    <div class="stat-card card">
+                        <h3>Devis Validés</h3>
+                        <p class="stat-number">892</p>
+                    </div>
+                    <div class="stat-card card">
+                        <h3>Produits en Stock</h3>
+                        <p class="stat-number">5,430</p>
+                    </div>
+                    <div class="stat-card card">
+                        <h3>Clients Inscrits</h3>
+                        <p class="stat-number">340</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Devis View -->
+            <section id="devis" class="view-section">
+                <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                    <h2>Devis</h2>
+                    <p>Liste des devis soumis</p>
+                </div>
+                <div class="card table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Client</th>
+                                <th>Téléphone</th>
+                                <th>Produit</th>
+                                <th>Quantité</th>
+                                <th>Montant Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>24/10/2026</td>
+                                <td>Jean Dupont</td>
+                                <td>+237 600 000 000</td>
+                                <td>Panneau Solaire</td>
+                                <td>10</td>
+                                <td>150,000 F</td>
+                            </tr>
+                            <tr>
+                                <td>23/10/2026</td>
+                                <td>Marie Curie</td>
+                                <td>+237 600 000 001</td>
+                                <td>Ampoule LED</td>
+                                <td>50</td>
+                                <td>25,000 F</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Stock View -->
+            <section id="stock" class="view-section">
+                <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                    <h2>Stock</h2>
+                    <p>Gestion de l'inventaire</p>
+                </div>
+                <div class="card table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Désignation</th>
+                                <th>Catégorie</th>
+                                <th>Prix de Vente</th>
+                                <th>Stock Actuel</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="../img/auto-machine.jpg" alt="Produit" style="width: 50px; height: 50px; object-fit: cover; border-radius: 0.5rem;"></td>
+                                <td>Panneau Solaire 200W</td>
+                                <td>Solaire</td>
+                                <td>15,000 F</td>
+                                <td>43</td>
+                                <td>
+                                    <button class="btn btn-small" style="background:var(--primary-color);color:white;">+</button>
+                                    <button class="btn btn-small" style="background:#EF4444;color:white;">-</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Vendeurs View -->
+            <section id="vendeurs" class="view-section">
+                <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                    <h2>Gestion des Vendeurs</h2>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Ajouter un vendeur</h3>
+                        <form style="margin-top: 1rem;">
+                            <div class="form-group">
+                                <label>Nom</label>
+                                <input type="text" class="form-control" placeholder="Nom du vendeur">
+                            </div>
+                            <div class="form-group">
+                                <label>Mot de passe</label>
+                                <input type="password" class="form-control" placeholder="Mot de passe">
+                            </div>
+                            <button class="btn btn-primary" style="width: 100%;">Ajouter</button>
+                        </form>
+                    </div>
+                    <div class="card table-container">
+                        <h3>Liste des vendeurs</h3>
+                        <table class="admin-table" style="margin-top: 1rem;">
+                            <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Statut</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alioune</td>
+                                    <td>Actif</td>
+                                    <td>
+                                        <button class="btn btn-small" style="background:#F59E0B;color:white;">Bloquer</button>
+                                        <button class="btn btn-small" style="background:#EF4444;color:white;">Suppr.</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rapports View -->
+            <section id="rapports" class="view-section">
+                <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                    <h2>Rapports Soumis</h2>
+                </div>
+                <div class="card">
+                    <div style="border-left: 4px solid var(--primary-color); padding-left: 1rem; margin-bottom: 1.5rem;">
+                        <h4 style="margin-bottom: 0.5rem;">Rapport du 24/10/2026 par Alioune</h4>
+                        <p style="color: var(--gray-text);">"Journée très productive, 5 devis signés pour des installations solaires complètes. Stock de câbles à surveiller."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Validation Devis View -->
+            <section id="validation" class="view-section">
+                <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                    <h2>Validation des Devis</h2>
+                </div>
+                <div class="card table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Devis ID</th>
+                                <th>Client</th>
+                                <th>Montant</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#DEV-001</td>
+                                <td>Entreprise Alpha</td>
+                                <td>1,200,000 F</td>
+                                <td>
+                                    <button class="btn btn-small btn-primary">Valider</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Clients View -->
+            <section id="clients" class="view-section">
+                <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                    <h2>Gestion des Clients</h2>
+                </div>
+                <div class="card table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Email</th>
+                                <th>Statut</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paul B.</td>
+                                <td>paul@example.com</td>
+                                <td><span style="color: var(--primary-color);">Connecté</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sarah O.</td>
+                                <td>sarah@example.com</td>
+                                <td><span style="color: var(--gray-text);">Déconnecté</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
