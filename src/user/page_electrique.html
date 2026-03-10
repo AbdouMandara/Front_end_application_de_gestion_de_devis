@@ -6,12 +6,13 @@
     <title>Gadgets-industries - Section Électrique</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
     <header>
         <h1>Gadgets-industries</h1>
                 <button class="menu-toggle" aria-label="Menu">&#9776;</button>
-        <button id="theme-toggle" aria-label="Changer de thème">&#127769;</button>
+        <button id="theme-toggle" class="icon-btn" aria-label="Changer de thème"><i class="ph ph-sun" style="font-size: 1.5rem;"></i></button>
         <div class="nav-overlay"></div>
         <nav>
             <ul>
@@ -52,9 +53,9 @@
                     <!-- Rows will be injected by JS -->
                 </div>
 
-                <div style="margin-top: 2rem; display: flex; gap: 1rem;">
-                    <button type="button" id="add-product" class="btn btn-blue">Ajouter un produit</button>
-                    <button type="submit" class="btn btn-primary">Soumettre le devis</button>
+                <button type="button" id="add-product" class="btn btn-blue">Ajouter un produit</button>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem;justify-content: center;">
+                    <button type="submit" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">Soumettre le devis</button>
                 </div>
             </form>
         </div>

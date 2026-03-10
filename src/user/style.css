@@ -203,10 +203,20 @@ nav a:hover {
     color: var(--gray-text);
     font-size: 1.1rem;
 }
-/* Pour la 3 e div de la page d'accueil dont le titre est "installation solaire et électrique */
-.card_3{
-    grid-column: 1 / -1;
-    justify-self: center;
+/* La 3ème div (card_3) gère désormais sa largeur nativement via Grid pour correspondre aux autres cartes */
+
+/* Grille des services centrée */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 100%;
+}
+.services-grid > .card {
+    width: 100%;
+    max-width: 380px;
+    flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
 }
 
 /* Carousels/Cards */
@@ -238,7 +248,7 @@ nav a:hover {
     padding: 2.5rem;
     box-shadow: var(--shadow);
     width: 100%;
-    max-width: 500px;
+    width: 500px;
     margin: 3rem auto;
 }
 .box{
@@ -246,6 +256,9 @@ nav a:hover {
     flex-direction: column;
     gap: 0.75rem;
     margin-bottom: 1.35rem;
+}
+.card-contact h3 {
+    text-align: center;
 }
 .card h3 {
     font-size: 1.5rem;
@@ -454,4 +467,83 @@ footer {
     body.dark-mode nav ul {
         background: var(--light-bg);
     }
+}
+
+.logo-text span {
+    font-size: 0.75rem;
+    color: var(--gray-text);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--gray-text);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.icon-btn:hover {
+    color: var(--primary-color);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--primary-light);
+    padding: 0.4rem 1rem 0.4rem 0.4rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.user-profile:hover {
+    background: #DCEDC8;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.username {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gray-dark);
+}
+
+.sidebar-footer {
+    margin-top: auto;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--red-logout);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.8rem 0;
+    transition: opacity 0.2s;
+}
+.logout-btn:hover {
+    opacity: 0.7;
 }
